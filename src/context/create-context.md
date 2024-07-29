@@ -36,9 +36,9 @@
 
 3 - Definir o Valor do Contexto
 
-        Passe qualquer valor ou função que você deseja compartilhar através do Context para a propriedade value do Provider.
+    Passe qualquer valor ou função que você deseja compartilhar através do Context para a propriedade value do Provider.
 
-        Isso pode incluir estados, funções de manipulação, ou qualquer outro dado que deve ser acessível por componentes filhos.
+    Isso pode incluir estados, funções de manipulação, ou qualquer outro dado que deve ser acessível por componentes filhos.
 
     ```jsx
         const contextValue = {
@@ -56,24 +56,24 @@
 
 4 - Consumir o Contexto em Componentes
 
-        Utilize o useContext para acessar o valor do Context dentro de componentes funcionais.
+    Utilize o useContext para acessar o valor do Context dentro de componentes funcionais.
 
-        Para componentes de classe, use o componente Consumer fornecido pelo Context.
+    Para componentes de classe, use o componente Consumer fornecido pelo Context.
 
-        ```jsx
-            import React, { useContext } from 'react';
+    ```jsx
+        import React, { useContext } from 'react';
 
-            const MyComponent = () => {
-                const context = useContext(MyContext);
+        const MyComponent = () => {
+            const context = useContext(MyContext);
 
-                return (
-                    <div>
-                        <p>User: {context.user}</p>
-                        <button onClick={context.logout}>Logout</button>
-                    </div>
-                );
-            };
-        ```
+            return (
+                <div>
+                    <p>User: {context.user}</p>
+                    <button onClick={context.logout}>Logout</button>
+                </div>
+            );
+        };
+    ```
 
 ## Resumo:
 
