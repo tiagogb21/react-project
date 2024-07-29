@@ -32,29 +32,29 @@
                     </MyContext.Provider>
                 );
             };
-        ```
+    ```
 
-    3 - Definir o Valor do Contexto
+3 - Definir o Valor do Contexto
 
         Passe qualquer valor ou função que você deseja compartilhar através do Context para a propriedade value do Provider.
 
         Isso pode incluir estados, funções de manipulação, ou qualquer outro dado que deve ser acessível por componentes filhos.
 
-        ```jsx
-            const contextValue = {
-                user: 'John Doe',
-                isAuthenticated: true,
-                logout: () => { /* lógica de logout */ }
-            };
+    ```jsx
+        const contextValue = {
+            user: 'John Doe',
+            isAuthenticated: true,
+            logout: () => { /* lógica de logout */ }
+        };
 
-            return (
-                <MyContext.Provider value={contextValue}>
-                    {children}
-                </MyContext.Provider>
-            );
-        ```
+        return (
+            <MyContext.Provider value={contextValue}>
+                {children}
+            </MyContext.Provider>
+        );
+    ```
 
-    4 - Consumir o Contexto em Componentes
+4 - Consumir o Contexto em Componentes
 
         Utilize o useContext para acessar o valor do Context dentro de componentes funcionais.
 
