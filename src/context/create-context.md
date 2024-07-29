@@ -1,4 +1,7 @@
-4 Etapas para Criar e Utilizar o Context em React:
+# Context
+
+
+## 4 Etapas para Criar e Utilizar o Context em React:
 
     1 - Criar o Context
 
@@ -30,3 +33,56 @@
                 );
             };
         ```
+
+    3 - Definir o Valor do Contexto
+
+        Passe qualquer valor ou função que você deseja compartilhar através do Context para a propriedade value do Provider.
+
+        Isso pode incluir estados, funções de manipulação, ou qualquer outro dado que deve ser acessível por componentes filhos.
+
+        ```jsx
+            const contextValue = {
+                user: 'John Doe',
+                isAuthenticated: true,
+                logout: () => { /* lógica de logout */ }
+            };
+
+            return (
+                <MyContext.Provider value={contextValue}>
+                    {children}
+                </MyContext.Provider>
+            );
+        ```
+
+    4 - Consumir o Contexto em Componentes
+
+        Utilize o useContext para acessar o valor do Context dentro de componentes funcionais.
+
+        Para componentes de classe, use o componente Consumer fornecido pelo Context.
+
+        ```jsx
+            import React, { useContext } from 'react';
+
+            const MyComponent = () => {
+                const context = useContext(MyContext);
+
+                return (
+                    <div>
+                        <p>User: {context.user}</p>
+                        <button onClick={context.logout}>Logout</button>
+                    </div>
+                );
+            };
+        ```
+
+## Resumo:
+
+    - createContext(obj) --> cria o contexto
+
+    - <MyContext.Provider value={contextValue}>
+
+        - Provider --> Envolve a árvore de componentes
+
+        - value --> Define o valor do contexto
+
+    - useContext --> Consome o contexto
