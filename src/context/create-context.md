@@ -6,7 +6,7 @@
 
         O Context fornece um objeto com duas propriedades principais: Provider e Consumer.
 
-        ```
+        ```js
             import React, { createContext } from 'react';
 
             // Passa um valor padrão para o contexto (opcional)
@@ -19,7 +19,7 @@
 
         O Provider aceita uma propriedade value, que define o valor que será acessível por todos os componentes filhos que consomem este Context.
 
-        ```
+        ```js
             const MyProvider = ({ children }) => {
                 const contextValue = { /* valores e funções que você deseja fornecer */ };
 
