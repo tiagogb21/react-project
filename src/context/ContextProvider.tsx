@@ -1,14 +1,12 @@
-import { ContextProvider1 } from ".../Context1";
-import { ContextProvider2 } from ".../Context2";
-import { ContextProvider3 } from ".../Context3";
-import { ContextProvider4 } from ".../Context4";
+import UserProvider from "./user";
 import { combineComponents } from "../utils/combineComponents";
+import { FC, ReactNode } from "react";
 
-const providers = [
-    ContextProvider1,
-    ContextProvider2,
-    ContextProvider3,
-    ContextProvider4,
+const providers: Array<FC<{ children: ReactNode }>> = [
+    UserProvider,
+    // ContextProvider2,
+    // ContextProvider3,
+    // ContextProvider4,
 ];
 
 export const AppContextProvider = combineComponents(...providers);

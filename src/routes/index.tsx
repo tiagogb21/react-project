@@ -4,11 +4,11 @@ import {
 } from "react-router-dom";
 
 const redirectIfUser = (): boolean => {
-    return false;
+    
 }
 
 const logoutUser = () => {
-    return 'a';
+    
 }
 
 export const routes = createBrowserRouter([

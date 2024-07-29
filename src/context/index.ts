@@ -16,4 +16,4 @@ import { createContext } from "react";
 // Ajuda a evitar o problema de propagação de propriedades (props drilling)
     // props drilling: evento que ocorre quando precisamos passar props por vários níveis até o componente aninhado, e os componentes intermediários não precisam delas.
 
-export const context = createContext();
+export const context = createContext({});
